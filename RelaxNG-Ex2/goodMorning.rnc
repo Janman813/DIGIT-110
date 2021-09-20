@@ -1,0 +1,25 @@
+start = root
+root = element xml {source, text}
+source = element source {title+, altTitle, author, pubPlace, date, note}
+text = element text {poem*}
+title = element title {level}
+level = attribute level {"book" | "inner"}
+altTitle = element altTitle {text}
+author = element author {text}
+pubPlace = element pubPlace {where}
+where = attribute where {"NYC"}
+date = element date {text, when}
+when = attribute when {text}
+note = element note {text}
+poem = element poem {title, lineGroup*, line*, id}
+lineGroup = element lineGroup {line*}
+line = attribute line {n*, motif, emph, placeName*}
+id = attribute id {"harlem"}
+n = attribute n {xsd:integer}
+motif = element motif {text}
+emph = emph {text}
+placeName = attribute placeName {ref*, type*}
+ref = attribute ref {text}
+type = attribute type {text}
+
+
