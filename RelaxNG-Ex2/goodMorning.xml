@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="goodMorning.rnc" type="application/relax-ng-compact-syntax"?>
+
+<?xml-model href="goodMorning-ebb.rnc" type="application/relax-ng-compact-syntax"?>
 <xml>
     <source>
         <title level="book">Montage of a Dream Deferred</title>
@@ -10,6 +11,7 @@
         <date when="1951"/>
         <note>Book length poem</note>
     </source>
+
     <text>
         <poem id="harlem">
             <title level="inner">Harlem</title>
