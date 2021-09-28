@@ -2,17 +2,18 @@
 # ONLY CHANGE THE RELAX NG FILE. CORRECT THE SCHEMA, ASSOCIATE IT WITH THE XML
 # AND MAKE FURTHER CHANGES TO THE SCHEMA SO IT VALIDATES THE XML.
 start = xml
-xml = element xml {body+,prologue?,text}
+xml = element xml {prologue?, body}# simplified the content, prolog and tex are out of sequencedS
 
-body = element body {sentance*}
+body = element body {sentence+}#sentence was spelt wrong get rid of the astric and put a plus
 
-prologue element prologue {who*, date*, where*, text}
-date = element date { "when"*, text}
+prologue = element prologue {who?, mixed{(date, where)*}} #added a equal between prologue and element also added mixed added a repatition to who.
+date = element date { when, text}#got rid of the astrict and qoutations
 where = element where {location*, text}
 when = attribute when {text}
 location = attribute location {text}
 
-sentence = element sentence {event*, who*, where*, text, person}
-person = element person {who}
+sentence = element sentence {n*, who?, mixed{(event| where| person)*}}#added n attribute, added mixed content and changed who's repition indicator
+person = element person {who*, text}#added text
 event = attribute event {text}
 who = attribute who {text}
+n = attribute n {xsd:integer}

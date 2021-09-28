@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--PLEASE SAVE LOCALLY OUTSIDE THE TEXT-ENCODING-HUB -->
-<?xml-model href="GettysburgSchema-classCorrected.rnc" type="application/relax-ng-compact-syntax"?>
+<?xml-model href="GettysburgSchema.rnc" type="application/relax-ng-compact-syntax"?>
 <xml>
     <prologue who="President Lincoln">President Lincoln delivered the 272 word Gettysburg
         Address on <date when="1863-11-19">November 19, 1863</date> on <where location="gettysburg-battle">the battlefield near
